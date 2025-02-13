@@ -1,75 +1,104 @@
-HEAD
 # TechXcelerate-FlowAid
 
-HEAD
-# flowaid-frontend
+## Getting Started with React on Windows
 
-# Getting Started with Create React App
+### Prerequisites
+Before setting up the project, ensure you have the following installed:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. **Node.js (LTS version recommended)**  
+   - Download from [https://nodejs.org/](https://nodejs.org/)
+   - Verify installation:
+     ```sh
+     node -v  # Check Node.js version
+     npm -v   # Check npm version
+     ```
+
+## Installing the React App
+
+### 1. Create a New React App
+Open *Command Prompt (cmd)* or *PowerShell*, then run:
+```sh
+npx create-react-app my-app
+```
+
+If npx is not recognized, install Create React App globally:
+```sh
+npm install -g create-react-app  
+npx create-react-app my-app  
+```
+
+### 2. Navigate to Project Folder & Start Development Server
+```sh
+cd my-app  
+npm start  
+```
+This will launch the app in your default browser at [http://localhost:3000](http://localhost:3000).
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production in the `build` folder.
 
 ### `npm run eject`
+Removes the single build dependency to allow full control over configurations.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Optional Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. React Router (For Navigation)
+```sh
+npm install react-router-dom
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. State Management (If Needed)
+```sh
+npm install redux react-redux
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Firebase (For Backend Services)
+```sh
+npm install firebase
+```
+
+## Handling Missing `react-scripts`
+If `react-scripts` is missing or not working, follow these steps:
+
+### 1. Install react-scripts Manually
+```sh
+npm install react-scripts --save
+```
+
+### 2. If Installation Fails, Clear Cache and Try Again
+```sh
+npm cache clean --force
+npm install react-scripts --save
+```
+
+### 3. If Issues Persist, Delete `node_modules` and Reinstall Dependencies
+```sh
+rd /s /q node_modules package-lock.json  # For Windows (Command Prompt)
+npm install
+```
+
+### 4. Run Your React App Again
+```sh
+npm start
+```
+
+## Recommended IDE
+Use **Visual Studio Code** for the best development experience.
 
 ## Learn More
+- [Create React App Documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+- [React Documentation](https://reactjs.org/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
